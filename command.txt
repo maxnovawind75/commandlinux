@@ -67,7 +67,7 @@ Cela est utile si dans l'avenir vous remarquez un bug dans votre Os et de le fai
 
 Les trucs utiles à savoir :
 -Pour faire un copier coller dans la console : crtl +shift+c , crtl+shift+v.
-En disposant d'une souris la clic de la molette remplace le crtl+shift+v dans la console du coup le copier/coller devient plus rapide car
+En disposant d'une souris le clic de la molette remplace le crtl+shift+v dans la console du coup le copier/coller devient plus rapide car
 vous n'avez qu'a surligner avec votre souris et faire clic molette.
 -pour mettre a jour vos drivers pour votre wifi interne : on fait "lspci | grep Network" => infos sur votre carte réseau
 puis on google s'il n'y pas des paquets debian disponible pour ce type de carte réseau.
