@@ -16,6 +16,7 @@ Elle permet de mettre à jour vos paquets.
 Cette commande permet donc de changer de kernel.
 Il faut savoir que les kernels récentes corrigent certains bugs présents.
 
+-"apt autoremove": permet de supprimer les anciens paquets qui ne sont plus utilisés
 remarque : les commandes avec apt requiert le mode sudo si on est pas sur root
 
 -"su -"="su - root" : permet de passer en terminal en tant que root
