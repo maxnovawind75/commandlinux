@@ -1,0 +1,73 @@
+Voici les bases des commandes linux à savoir :
+
+-"adduser": aller sur le net pour plus de détails pour ajouter un nouveau compte utilisateur.
+certains programmes ne peuvent pas être lancé en tant que root
+: google, vlc etc
+
+-"apt-get update" : permet de mettre vos sources à jour : en effet
+vous pouvez importer vos sources dans "/etc/apt/sources.list"
+La plupart du temps, vous laisserez vos sources tels quels.
+Mais imaginer que vous avez avez besoin d'un driver disponible uniquement sur debian alors vous serez obligé d'ajouter vos sources à l'endroit que je vous ai indiqué précédemment.
+
+-"apt-get upgrade" : cette commande vient après la commande update .Il est important d'update ces sources avant de faire upgrade.
+Elle permet de mettre à jour vos paquets.
+
+-"apt-get dist-upgrade" : cette commande permet de mettre à jour votre kernel (votre noyau de os). Très important de le faire parfois si votre noyau a été modifé anormalement.
+Cette commande permet donc de changer de kernel.
+Il faut savoir que les kernels récentes corrigent certains bugs présents.
+
+remarque : les commandes avec apt requiert le mode sudo si on est pas sur root
+
+-"su -"="su - root" : permet de passer en terminal en tant que root
+
+-"su - nom_utilisateur" : permet de passer en terminal en tant qu'utilisateur
+ rem: N'essayer pas de faire ca puis de lancer google chrome sur root :
+en fait l'application sera bloqué. Certaines applications obligent de passer par un compte utilisateur.
+
+-chmod : no comment lol 
+rem : chmod +x très utilisé pour lancer les scripts bash.
+
+-find : commande qui permet de trouver des fichiers dans votre os
+
+-history : permet de voir l'historique de vos commandes (propre à chaque utilisateur) 
+
+-grep : rappel : cette commande est très souvent utiliser avec le "|"
+ex: Imaginons que je dois retenir une commande assez long comme celle-ci
+:"iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080"
+Sans rentrer dans les détails cette commande permet de rediriger le port tcp  80 au port 8080
+pour retrouver cette commande tappée avant nous pouvons faire
+: history | grep ip
+
+-rmdir, rm : suppression de dossier ou de fichier
+rem : "rm -R nom_dossier" va supprimer recursivement vos fichiers. Cette commande est irréversible donc faites attention
+
+-touch nom_fichier.extension : création de fichier
+
+-nano nom_fichier : créer votre fichier ou permet de modifier votre fichier(déjà crée) depuis le terminal.
+
+-ls : lister les fichiers
+
+-ifconfig : ultra important permet d'avoir les infos de réseau sur votre os tel que l'ip.
+
+-lsusb, lspci : ces commandes sont parfois utiles si vous voulez avoir des infos sur votre usb ou sur vos composants pci installes sur votre os
+
+-route -n : commande qui permet de récuperer l'ip du routeur.
+
+-netstat : cf cours réseau
+
+-top, ps : gestionnaire de processus.
+
+-dmesg : je me permet de vous faire retenir cette commande car vous allez l'utiliser toute votre vie si vous développer sur linux:
+c'est une commande qui affiche l'historique de toutes les infos concernant les drivers chargés dans votre kernel en mode debug depuis le démarrage.
+Cette commande permettrai du coup de voir concretement les interactions entre votre système, vos périphérique et vos drivers.
+Lorsqu'il y a un probleme sur vos drivers ou pilotes il est parfois utile de faire cette commande pour voir ce qu'il se passe vraiment.
+N'hesitez pas à utiliser un "| grep" pour spécifier votre recherche ;)
+Cela est utile si dans l'avenir vous remarquez un bug dans votre Os et de le faire partager sur le git de kali. Je dis ca car beaucoup de gens poste leurs problèmes de drivers sans dmesg ce qui est très embêtant pour déterminer le problème.
+
+
+Les trucs utiles à savoir :
+-Pour faire un copier coller dans la console : crtl +shift+c , crtl+shift+v.
+En disposant d'une souris la clic de la molette remplace le crtl+shift+v dans la console du coup le copier/coller devient plus rapide car
+vous n'avez qu'a surligner avec votre souris et faire clic molette.
+-pour mettre a jour vos drivers pour votre wifi interne : on fait "lspci | grep Network" => infos sur votre carte réseau
+puis on google s'il n'y pas des paquets debian disponible pour ce type de carte réseau.
