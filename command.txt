@@ -13,13 +13,14 @@ Mais imaginer que vous avez avez besoin d'un driver disponible uniquement sur de
 Elle permet de mettre à jour vos paquets.
 
 -"apt-get dist-upgrade" : cette commande permet de mettre à jour votre kernel (votre noyau de os). Très important de le faire parfois si votre noyau a été modifé anormalement.
+Un reboot s'impose après cette commande.
 Cette commande permet donc de changer de kernel.
 Il faut savoir que les kernels récentes corrigent certains bugs présents.
 
 -"apt autoremove": permet de supprimer les anciens paquets qui ne sont plus utilisés
 
 -dpkg -i : permet d'installer les paquets deb dans votre système.
- suivi de apt-get -f install si paquet contient de dépendance.
+ suivi de apt-get -f install si le paquet installé contient de dépendance.
 
 remarque : les commandes avec apt requiert le mode sudo si on est pas sur root
 
